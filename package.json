@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/briandawkins92/FriendFinder/issues"
   },
-  "homepage": "https://github.com/briandawkins92/FriendFinder#readme"
+  "homepage": "https://github.com/briandawkins92/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  }
 }
