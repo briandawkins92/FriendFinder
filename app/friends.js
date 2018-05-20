@@ -1,4 +1,3 @@
-/* Begin Javascript*/
 
+console.log("hello world from friends.js");
 
-/* End Javscript*/
