@@ -3,7 +3,7 @@ var express = require("express");
 var bodyParser = require('body-parser');
 
 var path = require("path");
-
+var friendPossibilities = require('../app/friends.js');
 var app = express();
 var PORT = 4000;
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,25 +17,10 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 
-  var friends = [
-    {
-      name: "Brian Dawkins",
-      photo: "file:///Users/briandawkins/Desktop/branching.png",
-      q1: 1,
-      q2: 1,
-      q3: 1,
-      q4: 1,
-      q5: 1,
-      q6: 1,
-      q7: 1,
-      q8: 1,
-      q9: 1,
-      q10: 1
-    }
-  ];
+
   
   app.get("/api/friends", function(req, res) {
-      res.json(friends);
+      res.json(friendPossibilities);
         });
   
     app.post("/api/friends", function(req, res) {
@@ -43,7 +28,7 @@ app.get("/", function(req, res) {
       var newFriend = req.body;
     console.log(newFriend);
 
-      friends.push(newFriend);
+      friendPossibilities.push(newFriend);
     
       res.json(newFriend);
     });
@@ -55,3 +40,20 @@ app.get("/", function(req, res) {
 
 
   /* END JAVASCRIPT*/
+
+    // var friends = [
+  //   {
+  //     name: "Brian Dawkins",
+  //     photo: "file:///Users/briandawkins/Desktop/branching.png",
+  //     q1: 1,
+  //     q2: 1,
+  //     q3: 1,
+  //     q4: 1,
+  //     q5: 1,
+  //     q6: 1,
+  //     q7: 1,
+  //     q8: 1,
+  //     q9: 1,
+  //     q10: 1
+  //   }
+  // ];
