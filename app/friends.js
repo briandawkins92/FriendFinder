@@ -13,7 +13,8 @@
     q7: 1,
     q8: 1,
     q9: 1,
-    q10: 1
+    q10: 1,
+    sum: 10
     
     }, {
     
@@ -28,7 +29,8 @@
         q7: 3,
         q8: 4,
         q9: 1,
-        q10: 2
+        q10: 2,
+        sum:27
     
     } ,{
         name: "Lindsay Lohan",
@@ -42,7 +44,8 @@
         q7: 1,
         q8: 1,
         q9: 2,
-        q10: 3
+        q10: 3,
+        sum: 26
     }, {
         name: "Paris Hilton",
         photo: "../assets/paris.jpg",
@@ -55,7 +58,8 @@
         q7: 1,
         q8: 2,
         q9: 3,
-        q10: 2
+        q10: 2,
+        sum: 24
     }];
 
 module.exports = friendPossibilities;

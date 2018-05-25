@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var friendPossibilities = require('../app/friends.js');
 var app = express();
-var PORT = 4000;
+var PORT = process.env.PORT || 4000;
 
 module.exports = function (app) {
 	app.get('/api/friends', function(req, res) {
@@ -21,8 +21,7 @@ app.get("/api/friends", function(req, res) {
 
     var newFriend = req.body;
   
-    console.log("new friend" + newFriend);
-    console.log("friend data" + friendData);
+
   });
   app.post("../app/friends.js", function(req,res) {
     friendPossibilities.push(newFriend);
@@ -34,6 +33,7 @@ app.get("/api/friends", function(req, res) {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
+
 
 
 /* END jAVASCRIPT*/
