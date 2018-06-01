@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var path = require("path");
 var friendPossibilities = require('../app/friends.js');
 var app = express();
-var PORT = process.env.PORT || 4000;
+var PORT = process.env.PORT;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
